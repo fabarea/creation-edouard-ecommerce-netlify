@@ -1,51 +1,32 @@
 <template>
   <div>
-    <section class="item-contain">
-      <section class="img">
-        <img :src="`/products/${product.img}`" />
-      </section>
-      <section class="product-info">
-        <h1>{{ product.name }}</h1>
-        <star-rating
-          :rating="product.starrating"
-          :star-size="15"
-          :show-rating="false"
-          active-color="#000"
-          style="margin: 5px 0"
-        ></star-rating>
-        <h4 class="price">{{ product.price | dollar }}</h4>
-        <p>{{ product.description }}</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
-        <p class="quantity">
-          <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
-          <input type="number" v-model="quantity" />
-          <button class="update-num" @click="quantity++">+</button>
-        </p>
-        <p>
-          Available in additional colors:
-          <strong>
-            <span :style="`color: ${product.color}`">{{ product.color }}</span>
-          </strong>
-        </p>
-        <p>
-          <button class="button purchase" @click="cartAdd">Add to Cart</button>
-        </p>
-      </section>
-    </section>
-    <hr />
-    <div class="review">
-      <h2>Reviews</h2>
-      <!-- maybe an image of a person? -->
-      <star-rating
-        :rating="product.starrating"
-        active-color="#000"
-        :star-size="15"
-        :show-rating="false"
-        style="margin: 5px 0"
-      ></star-rating>
-      <p>{{ product.review }}</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iusto placeat consequatur voluptas sit mollitia ratione autem, atque sequi odio laborum, recusandae quia distinctio voluptatibus sint, quae aliquid possimus exercitationem.</p>
+    <div class="row">
+      <div class="col-sm-5" style="text-align: right">
+        <img :src="`/products/${product.img}`" width="300px"/>
+      </div>
+      <div class="col-sm">
+        <section class="product-info">
+          <h1>{{ product.name }}</h1>
+          <h4 class="price">{{ product.price | chf }}</h4>
+          <p>{{ product.description }}</p>
+          <p class="quantity">
+            <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
+            <input type="number" v-model="quantity" />
+            <button class="update-num" @click="quantity++">+</button>
+          </p>
+          <p>
+            Available in additional colors:
+            <strong>
+              <span :style="`color: ${product.color}`">{{ product.color }}</span>
+            </strong>
+          </p>
+          <p>
+            <button class="button purchase" @click="cartAdd">Add to Cart</button>
+          </p>
+        </section>
+      </div>
     </div>
+    <hr />
     <app-featured-products />
   </div>
 </template>
@@ -89,6 +70,7 @@ export default {
   margin-left: 8%;
   width: 80%;
   display: grid;
+  padding-right: 10px;
   justify-content: space-around;
   grid-template-columns: 1fr 2fr;
 }

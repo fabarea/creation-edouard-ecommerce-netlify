@@ -2,15 +2,15 @@
   <section>
     <div class="shopping">
       <h2 :class="{ active: cartUIStatus === 'idle' && cartCount === 0 }">01</h2>
-      <h4>Shopping Cart</h4>
+      <h4>Panier d'achat</h4>
     </div>
     <div class="checkout">
       <h2 :class="{ active: cartUIStatus === 'idle' && cartCount > 0 }">02</h2>
-      <h4>Check out</h4>
+      <h4>Commander</h4>
     </div>
     <div class="order">
       <h2 :class="{ active: cartUIStatus === 'success' }">03</h2>
-      <h4>Order Complete</h4>
+      <h4>Commande terminée</h4>
     </div>
   </section>
 </template>

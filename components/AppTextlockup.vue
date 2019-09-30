@@ -1,21 +1,21 @@
 <template>
   <div class="textlockup">
-    <div class="img">
+    <div class="img" style="text-align: right">
       <slot name="img">
-        <img src="/shoe1.jpg" alt="shoe" />
+        <img src="/chemise-africaine-homme-tenue-africaine-mode-pagne-121.jpg" alt="shoe" />
       </slot>
     </div>
     <div class="new">
-      <slot name="new">New</slot>
+      <slot name="new"></slot>
     </div>
     <div class="sale">
-      <slot name="sale">Men Shoes</slot>
+      <slot name="sale">Edouard</slot>
     </div>
     <div class="collection">
-      <slot name="collection">Collection</slot>
+      <slot name="collection">Création</slot>
     </div>
     <div class="details">
-      <slot name="details">Street Style New Fashion</slot>
+      <slot name="details">Africa Style Fashion</slot>
     </div>
   </div>
 </template>

@@ -14,19 +14,22 @@ export default {
     return {
       boxes: [
         {
+          uri: "women",
           icon: "/icon-package.svg",
-          heading: "Free Shipping Globally",
-          details: "Delivery in 4 Days"
+          heading: "collection femmes",
+          details: ""
         },
         {
-          icon: "/icon-cal.svg",
-          heading: "24/7 Customer Service",
-          details: "Call us any time"
-        },
-        {
+          uri: "children",
           icon: "/icon-service.svg",
-          heading: "Easy Online Returns",
-          details: "Send Within 30 Days"
+          heading: "Collection enfants",
+          details: ""
+        },
+        {
+          uri: "men",
+          icon: "/icon-cal.svg",
+          heading: "Collection hommes",
+          details: ""
         }
       ]
     };

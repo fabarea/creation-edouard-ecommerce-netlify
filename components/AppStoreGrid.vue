@@ -4,30 +4,21 @@
       <div v-for="item in filteredprice" :key="item.id" class="item">
         <div class="img-contain">
           <NuxtLink :to="`product/${item.id}`">
-            <img :src="`/products/${item.img}`" />
+            <img :src="`/products/${item.img}`" width="50px" height="200px"/>
           </NuxtLink>
         </div>
-        <star-rating
-          :rating="item.starrating"
-          active-color="#000"
-          :star-size="15"
-          :show-rating="false"
-          style="margin: 5px 0"
-        ></star-rating>
-        <h3>{{ item.name }}</h3>
-        <h4 class="price">{{ item.price | dollar }}</h4>
+        <strong>{{ item.name }}</strong>
+        <h4 class="price">{{ item.price | chf }}</h4>
         <NuxtLink :to="`product/${item.id}`">
-          <button class="multi-item">View Item ></button>
+          <button class="multi-item">Voir ></button>
         </NuxtLink>
       </div>
     </transition-group>
     <aside>
-      <h3>Special Sale</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero iusto nemo laboriosam perferendis voluptas ullam officiis, quibusdam quas quam eveniet est fugit delectus corporis incidunt nam esse suscipit itaque?</p>
-      <h3>Filter by Price:</h3>
+      <h3>Filtre par prix:</h3>
       <p style="margin-top: 5px">
-        Max Price
-        <strong>${{ pricerange }}</strong>
+        Prix maxium
+        <strong>CHF {{ pricerange }}</strong>
       </p>
       <input
         class="slider"
@@ -38,8 +29,8 @@
         :max="max"
         step="0.1"
       />
-      <span class="min">${{ min }}</span>
-      <span class="max">${{ max }}</span>
+      <span class="min">CHF {{ min }}</span>
+      <span class="max">CHF {{ max }}</span>
     </aside>
   </div>
 </template>
@@ -55,9 +46,9 @@ export default {
   },
   data() {
     return {
-      min: 0,
-      max: 200,
-      pricerange: 200
+      min: 10,
+      max: 50,
+      pricerange: 50
     };
   },
   computed: {

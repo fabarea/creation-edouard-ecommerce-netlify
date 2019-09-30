@@ -28,3 +28,33 @@ $ yarn generate or npm generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+Hosting
+-------
+
+Site is hosted on Netlify - https://www.netlify.com
+
+Copyright
+---------
+
+Fabien Udriot
+[Twitter](https://twitter.com/fudriot)
+[Github](https://github.com/fabarea)
+
+Based on the work of Sarah Drasner 
+[Twitter](https://twitter.com/sarah_edo)
+[Github](https://github.com/sdras)
+        
+TODO
+----
+
+* Send email of the basket
+* Write the order into a database? Where? Mangodb? Firebase? Google Stylesheets?
+    how can it be secure??
+* Add size of the product (M, S, ...)
+* Add Edouard images
+
+Nice to have
+------------
+
+Make the data comes from a third-party database ? Google Stylesheets

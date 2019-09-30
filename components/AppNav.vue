@@ -1,23 +1,29 @@
 <template>
   <header>
-    <h1>Skyline Ivy</h1>
+    <h1>Creation Edouard</h1>
     <nav>
       <ul>
         <li>
-          <nuxt-link exact to="/">Home</nuxt-link>
+          <nuxt-link exact to="/">Accueil</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/all">All</nuxt-link>
+          <nuxt-link to="/all">Tous</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/women">Women</nuxt-link>
+          <nuxt-link to="/women">Femme</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/men">Men</nuxt-link>
+          <nuxt-link to="/children">Enfants</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/men">Homme</nuxt-link>
         </li>
         <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
-          <nuxt-link to="/cart">Cart</nuxt-link>
+          <nuxt-link to="/cart">Panier d'achat</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/contact">Contact</nuxt-link>
         </li>
       </ul>
     </nav>

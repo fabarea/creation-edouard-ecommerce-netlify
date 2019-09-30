@@ -14,12 +14,12 @@
             <h3 class="productname">{{ item.name }}</h3>
           </td>
           <td>
-            <h4 class="price">{{ item.price | dollar }}</h4>
+            <h4 class="price">{{ item.price | chf }}</h4>
           </td>
           <td>
             <strong>{{ item.quantity }}</strong>
           </td>
-          <td>{{ item.quantity * item.price | dollar }}</td>
+          <td>{{ item.quantity * item.price | chf }}</td>
         </tr>
       </table>
 
@@ -35,10 +35,10 @@
           </div>
           <div class="num">
             <p>
-              <strong>{{ cartTotal | dollar }}</strong>
+              <strong>{{ cartTotal | chf }}</strong>
             </p>
             <p>Free Shipping</p>
-            <p class="golden">{{ cartTotal | dollar }}</p>
+            <p class="golden">{{ cartTotal | chf }}</p>
           </div>
         </div>
       </section>

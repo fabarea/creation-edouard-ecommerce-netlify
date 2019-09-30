@@ -1,15 +1,15 @@
 <template>
   <section>
     <h2>
-      <span>Featured Products</span>
+      <span>Dernières créations</span>
     </h2>
     <div class="featureditems">
       <div class="item" v-for="product in featuredProducts" :key="product.id">
         <img :src="`/products/${product.img}`" />
         <h3>{{ product.name }}</h3>
-        <h4>{{ product.price | dollar }}</h4>
+        <h4>{{ product.price | chf }}</h4>
         <NuxtLink :to="`/product/${product.id}`">
-          <button class="multi-item">View Item ></button>
+          <button class="multi-item">Voir ></button>
         </NuxtLink>
       </div>
     </div>
@@ -36,8 +36,6 @@ section {
   margin: 20px 0 70px;
   .item {
     border: 1px solid #eee2dc;
-    box-shadow: 0 3px 10px 0px #eee;
-    border-radius: 40px;
     padding: 10px 20px 30px;
     min-height: 150px;
     justify-self: center;
