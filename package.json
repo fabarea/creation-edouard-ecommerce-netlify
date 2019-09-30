@@ -1,7 +1,7 @@
 {
-  "name": "ecommerce-netlify",
+  "name": "creation-edouard",
   "version": "1.0.0",
-  "description": "A serverless function to process stripe payments with Nuxt, Netlify, and Lambda",
+  "description": "Boutique en ligne de vêtements africains, Burkina Faso Ouagadougou - Création Edouard",
   "author": "sdras",
   "private": true,
   "scripts": {
