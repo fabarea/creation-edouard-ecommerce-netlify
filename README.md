@@ -50,8 +50,10 @@ TODO
 * Send email of the basket
 * Write the order into a database? Where? Mangodb? Firebase? Google Stylesheets?
     how can it be secure??
-* Add size of the product (M, S, ...)
-* Add Edouard images
+* Feature: add size of the product (M, S, ...)
+* Content: improve Edouard images
+* Content: add more text about how the shop works.
+* Layout: Remove square button 
 
 Nice to have
 ------------
