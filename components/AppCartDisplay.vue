@@ -24,7 +24,7 @@
       </table>
 
       <section class="payment">
-        <app-card />
+        <app-cart />
         <div class="total">
           <div class="caption">
             <p>
@@ -54,13 +54,13 @@
 </template>
 
 <script>
-import AppCard from "~/components/AppCard.vue";
+import AppCart from "~/components/AppCart.vue";
 import { mapState } from "vuex";
 import { mapGetters } from "vuex";
 
 export default {
   components: {
-    AppCard
+    AppCart
   },
   computed: {
     ...mapState(["cart"]),

@@ -37,9 +37,29 @@ export const mutations = {
       ? (itemfound.quantity += payload.quantity)
       : state.cart.push(payload)
   }
-}
+};
 
 export const actions = {
+  async sendNotification({ getters, commit }, payload) {
+
+    // production
+    // const url = '/.netlify/functions/notify'
+    // development
+    const url = 'http://localhost:9000/notify';
+
+    // axios.post(
+    //   url,
+    //   {
+    //     body: 'todo...'
+    //   }
+    // )
+    //   .then(function (response) {
+    //     console.log(response);
+    //   })
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+  },
   async postStripeFunction({ getters, commit }, payload) {
     commit("updateCartUI", "loading")
 
@@ -76,4 +96,4 @@ export const actions = {
       commit("updateCartUI", "failure")
     }
   }
-}
+};
