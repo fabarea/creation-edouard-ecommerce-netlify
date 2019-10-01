@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-if="cartUIStatus === 'idle'" class="payment">
-      <h3>Please enter your payment details:</h3>
+      <h3>Insérer votre nom</h3>
       <label for="email">Email</label>
       <br />
       <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />

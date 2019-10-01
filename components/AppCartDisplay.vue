@@ -3,9 +3,9 @@
     <section v-if="cartCount > 0">
       <table>
         <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
+          <th>Produit</th>
+          <th>Prix</th>
+          <th>Quantité</th>
           <th>Total</th>
         </tr>
         <tr v-for="item in cart" :key="item.id">
@@ -28,16 +28,16 @@
         <div class="total">
           <div class="caption">
             <p>
-              <strong>Subtotal:</strong>
+              <strong>Sous-total:</strong>
             </p>
-            <p>Shipping:</p>
+            <p>Frais d'expédition:</p>
             <p class="golden">Total:</p>
           </div>
           <div class="num">
             <p>
               <strong>{{ cartTotal | chf }}</strong>
             </p>
-            <p>Free Shipping</p>
+            <p>Offert</p>
             <p class="golden">{{ cartTotal | chf }}</p>
           </div>
         </div>
@@ -45,9 +45,9 @@
     </section>
 
     <section v-else class="center">
-      <p>Your cart is empty, fill it up!</p>
-      <button class="pay-with-stripe">
-        <nuxt-link exact to="/">Back Home</nuxt-link>
+      <p>Votre panier d'achat est vide</p>
+      <button class="btn btn-secondary">
+        <nuxt-link exact to="/">Vers l'accueil</nuxt-link>
       </button>
     </section>
   </div>

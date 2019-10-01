@@ -15,7 +15,7 @@
             <button class="update-num" @click="quantity++">+</button>
           </p>
           <p>
-            <button class="button purchase" @click="cartAdd">Ajouter au panier</button>
+            <button class="btn btn-primary" @click="cartAdd">Ajouter au panier</button>
           </p>
         </section>
       </div>
