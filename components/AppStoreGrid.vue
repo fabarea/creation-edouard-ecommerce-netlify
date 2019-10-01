@@ -1,20 +1,27 @@
 <template>
-  <div class="storegrid">
-    <transition-group name="items" tag="section" class="content">
-      <div v-for="item in filteredprice" :key="item.id" class="item">
-        <div class="img-contain">
-          <NuxtLink :to="`product/${item.id}`">
-            <img :src="`/products/${item.img}`" width="50px" height="200px"/>
-          </NuxtLink>
+  <div class="row">
+
+    <div class="col-md-10">
+      <transition-group name="items" tag="section" class="card-deck">
+        <div v-for="item in filteredprice" :key="item.id" class="card-item">
+          <img class="card-img-top img-fluid" :src="`/products/${item.img}`" alt="">
+          <div class="card-body">
+            <NuxtLink :to="`product/${item.id}`">
+
+            </NuxtLink>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <h4 class="price">{{ item.price | chf }}</h4>
+              <NuxtLink :to="`product/${item.id}`">
+                <button class="btn btn-secondary">Voir ></button>
+              </NuxtLink>
+            </div>
+          </div>
         </div>
-        <strong>{{ item.name }}</strong>
-        <h4 class="price">{{ item.price | chf }}</h4>
-        <NuxtLink :to="`product/${item.id}`">
-          <button class="multi-item">Voir ></button>
-        </NuxtLink>
-      </div>
-    </transition-group>
-    <aside>
+      </transition-group>
+    </div>
+
+    <aside class="col-md-2">
       <h3>Filtre par prix:</h3>
       <p style="margin-top: 5px">
         Prix maxium
@@ -32,68 +39,52 @@
       <span class="min">CHF {{ min }}</span>
       <span class="max">CHF {{ max }}</span>
     </aside>
+
   </div>
 </template>
 
 <script>
-import StarRating from "vue-star-rating/src/star-rating.vue";
+    import StarRating from "vue-star-rating/src/star-rating.vue";
 
-export default {
-  props: {
-    data: {
-      required: true
-    }
-  },
-  data() {
-    return {
-      min: 10,
-      max: 50,
-      pricerange: 50
+    export default {
+        props: {
+            data: {
+                required: true
+            }
+        },
+        data() {
+            return {
+                min: 10,
+                max: 50,
+                pricerange: 50
+            };
+        },
+        computed: {
+            filteredprice() {
+                return this.data.filter(el => el.price < this.pricerange);
+            }
+        },
+        components: {
+            StarRating
+        }
     };
-  },
-  computed: {
-    filteredprice() {
-      return this.data.filter(el => el.price < this.pricerange);
-    }
-  },
-  components: {
-    StarRating
-  }
-};
 </script>
 
 <style lang="scss" scoped>
-.content {
-  height: 100%;
-  width: 100%;
-}
-
-.img-contain {
-  max-height: 200px;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  img {
-    width: 100%;
+  .card-item {
+    width: 33%;
+    float: right;
+    padding: 10px;
   }
-}
 
-.item {
-  max-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20px 0;
-}
+  .max {
+    display: inline-block;
+    float: right;
+  }
 
-aside {
-  height: 100%;
-  width: 100%;
-}
-
-.max {
-  display: inline-block;
-  float: right;
-}
+  @media screen and (max-width: 576px) {
+    .card-item {
+      width: 100%;
+    }
+  }
 </style>

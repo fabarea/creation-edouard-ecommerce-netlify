@@ -10,8 +10,9 @@ export const state = () => ({
 
 export const getters = {
   featuredProducts: state => state.storedata.slice(0, 3),
-  women: state => state.storedata.filter(el => el.gender === "Female"),
-  men: state => state.storedata.filter(el => el.gender === "Male"),
+  women: state => state.storedata.filter(el => el.gender === "female"),
+  children: state => state.storedata.filter(el => el.gender === "child"),
+  men: state => state.storedata.filter(el => el.gender === "male"),
   cartCount: state => {
     if (!state.cart.length) return 0
     return state.cart.reduce((ac, next) => ac + next.quantity, 0)

@@ -2,7 +2,6 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
-
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
@@ -18,7 +17,7 @@
 // @import "../node_modules/bootstrap/scss/custom-forms";
 @import "../node_modules/bootstrap/scss/nav";
 @import "../node_modules/bootstrap/scss/navbar";
-// @import "../node_modules/bootstrap/scss/card";
+ @import "../node_modules/bootstrap/scss/card";
 // @import "../node_modules/bootstrap/scss/breadcrumb";
 @import "../node_modules/bootstrap/scss/pagination";
 @import "../node_modules/bootstrap/scss/badge";
@@ -47,7 +46,7 @@ body {
   border: 10px solid #ccc;
   min-height: 100vh;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   word-spacing: 1px;
@@ -62,7 +61,7 @@ h1,
 h2,
 h3 {
   font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  "Helvetica Neue", Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -74,150 +73,18 @@ p {
   margin: 20px 0;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-a,
-a:active,
-a:visited {
-  color: $brandprimary;
-  text-decoration: none;
-  transition: 0.3s all ease;
-}
-
-button {
-  border: 1px solid #ccc;
-  background: white;
-  padding: 10px 14px;
-  cursor: pointer;
-  color: black;
-  font-weight: 700;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  transition: 0.3s all ease;
-  &:hover {
-    background: black;
-    border: 1px solid black;
-    color: white;
-  }
-}
-
-button.purchase {
-  background: $brandprimary;
-  color: white;
-  font-size: 16px;
-  border: none;
-  &:hover {
-    background: #c14103;
-  }
-}
-
-button.pay-with-stripe {
-  background: black;
-  color: white;
-  font-size: 16px;
-  border: none;
-  &:hover {
-    background: #c14103;
-  }
-
-  &:disabled {
-    background: #999;
-  }
-}
-
 .price {
   color: $brandprimary;
   font-size: 20px;
   margin: 5px 0;
   font-weight: normal;
   font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  "Helvetica Neue", Arial, sans-serif;
 }
 
 hr {
   border-top: 1px solid #eee;
   margin: 30px 0;
-}
-
-label {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-input {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  padding: 5px 10px;
-}
-
-.center {
-  text-align: center;
-}
-
-/*------------  Store Grid   -----------*/
-
-.storegrid {
-  width: 95%;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 40px;
-  grid-row-gap: 0px;
-}
-
-/* no grid support */
-aside {
-  float: left;
-  width: 19.1489%;
-}
-
-.content {
-  /*no grid support*/
-  float: right;
-  width: 79.7872%;
-  /* grid */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  padding: 0 !important;
-}
-
-@media (max-width: 600px) {
-  aside {
-    width: 100% !important;
-    margin-bottom: 10px !important;
-  }
-
-  .content {
-    width: 100% !important;
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .content {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .storegrid {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-  }
 }
 
 /* --- items animation --- */

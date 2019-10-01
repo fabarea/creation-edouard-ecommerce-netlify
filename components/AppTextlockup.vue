@@ -1,5 +1,5 @@
 <template>
-  <div class="textlockup">
+  <div class="textlockup container">
     <div class="img" style="text-align: right">
       <slot name="img">
         <img src="/chemise-africaine-homme-tenue-africaine-mode-pagne-121.jpg" alt="shoe" />

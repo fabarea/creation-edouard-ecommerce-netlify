@@ -42,7 +42,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['normalize.css', { src: '~/assets/main.scss', lang: 'sass' }],
+  css: [{ src: '~/assets/main.scss', lang: 'sass' }],
   /*
    ** Plugins to load before mounting the App
    */

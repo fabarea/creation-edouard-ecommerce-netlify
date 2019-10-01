@@ -45,7 +45,7 @@
     </div>
   </div>
 </template>
- 
+
 <script>
 import { Card, createToken } from "vue-stripe-elements-plus";
 
@@ -79,17 +79,9 @@ export default {
     }
   }
 };
-</script> 
- 
-<style lang="scss" scoped>
-input,
-button {
-  width: 100%;
-}
+</script>
 
-button {
-  margin-top: 20px;
-}
+<style lang="scss" scoped>
 
 .payment {
   margin-top: 20px;
@@ -105,4 +97,4 @@ button {
 .stripe-card.complete {
   border-color: green;
 }
-</style> 
+</style>

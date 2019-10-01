@@ -15,13 +15,7 @@
             <button class="update-num" @click="quantity++">+</button>
           </p>
           <p>
-            Available in additional colors:
-            <strong>
-              <span :style="`color: ${product.color}`">{{ product.color }}</span>
-            </strong>
-          </p>
-          <p>
-            <button class="button purchase" @click="cartAdd">Add to Cart</button>
+            <button class="button purchase" @click="cartAdd">Ajouter au panier</button>
           </p>
         </section>
       </div>
