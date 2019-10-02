@@ -1,5 +1,7 @@
 <template>
   <div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
     <app-nav />
     <main>
       <nuxt />
