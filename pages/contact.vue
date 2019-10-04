@@ -12,7 +12,7 @@
     </div>
 
     <div id="map" style="margin-top: 30px">
-      [TODO: carte de ouagadougou avec un marker qui pointe sur la ville de Ouaga]
+
     </div>
   </div>
 </template>
@@ -31,14 +31,14 @@
         },
         mounted() {
 
-            this.map = L.map('map').setView([51.505, -0.09], 13);
+            this.map = L.map('map').setView([12.293609,-1.5383922], 247);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(this.map);
 
             L.marker([51.5, -0.09]).addTo(this.map)
-                .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                .bindPopup('La boutique de Edouard')
                 .openPopup();
         },
     };
