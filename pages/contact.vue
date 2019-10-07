@@ -31,13 +31,13 @@
         },
         mounted() {
 
-            this.map = L.map('map').setView([12.293609,-1.5383922], 247);
+            this.map = L.map('map').setView([12.293609,-1.5383922], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(this.map);
 
-            L.marker([51.5, -0.09]).addTo(this.map)
+            L.marker([12.293609, -1.5383922]).addTo(this.map)
                 .bindPopup('La boutique de Edouard')
                 .openPopup();
         },
