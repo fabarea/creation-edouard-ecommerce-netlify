@@ -90,3 +90,6 @@ sw.*
 
 # Lambda functions
 lambda
+
+# Local Netlify folder
+.netlify
