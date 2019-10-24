@@ -1,7 +1,7 @@
 import faunadb from 'faunadb' /* Import faunaDB sdk */
 import { config as dotenvConfig } from 'dotenv'
 
-// Import possible local configuration
+// Load .env configuration
 dotenvConfig();
 
 /* configure faunaDB Client with our secret */

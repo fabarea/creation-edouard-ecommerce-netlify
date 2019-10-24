@@ -17,13 +17,18 @@
     "build:lambda": "netlify-lambda build functions"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.4",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.4",
     "dotenv": "^8.0.0",
+    "encoding": "^0.1.12",
     "faunadb": "^2.7.0",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
     "gsap": "^2.1.3",
     "jquery": "^3.4.1",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
     "nodemailer": "^6.3.0",
     "nodemailer-smtp-transport": "^2.7.4",
