@@ -6,7 +6,7 @@ import {config as dotenvConfig} from "dotenv";
 // Load .env configuration
 dotenvConfig();
 
-const URL = 'https://graphql.fauna.com/graphql'
+const URL = 'https://graphql.fauna.com/graphql';
 
 const client = new ApolloClient({
   uri: URL,
@@ -18,24 +18,24 @@ const client = new ApolloClient({
       },
     });
   },
-})
-
+});
 
 exports.handler = (event, context, callback) => {
+  const currentDate = new Date().toString();
   const allOpeningFens = gql`
-      query FindAllTodos {
-          allTodos {
-              data {
-                  _id
-                  title
-                  completed
-              }
+      mutation CreateATodo {
+          createTodo(data: {
+              title: "Build an awesome app me ${currentDate}!"
+              completed: false
+          }) {
+              title
+              completed
           }
       }
   `;
 
 
-  client.query({ query: allOpeningFens })
+  client.mutate({ mutation: allOpeningFens })
     .then(results => {
       callback(null, {
         statusCode: 200,
@@ -43,4 +43,4 @@ exports.handler = (event, context, callback) => {
       })
     })
     .catch(e => callback(e))
-}
+};
