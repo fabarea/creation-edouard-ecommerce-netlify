@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section v-if="cartCount > 0">
+    <section v-if="cartCount == 0">
       <table>
         <tr>
           <th>Produit</th>
