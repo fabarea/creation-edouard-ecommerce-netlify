@@ -35,7 +35,12 @@ exports.handler = (event, context, callback) => {
   `;
 
 
-  client.query({ query: allOpeningFens })
+  client.query(
+    {
+      query: allOpeningFens,
+      fetchPolicy: 'no-cache'
+    }
+  )
     .then(results => {
       callback(null, {
         statusCode: 200,
