@@ -15,7 +15,7 @@ exports.handler = (event, context, callback) => {
   /* parse the string body into a useable JS object */
   // const data = JSON.parse(event.body)
   const data = {
-    title: 'My todo title 22',
+    title: 'My todo title from fauna api',
     completed: false,
   };
 
