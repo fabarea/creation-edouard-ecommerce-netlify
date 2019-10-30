@@ -1,4 +1,4 @@
-# 🛍 Ecommerce Store with Netlify Functions and Stripe
+# 🛍 Ecommerce Store with Netlify Functions
 
 > Boutique en ligne de vêtements africains, Burkina Faso Ouagadougou - Création Edouard
 
@@ -19,6 +19,15 @@ $ npm start
 
 # generate static project
 $ npm generate
+```
+
+## Configure the Backend and 
+
+Create a FaunaDB database and adjust the .env file following  
+
+```bash
+cp .env.example .env.development
+ln -s .env.development .env
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
