@@ -2,15 +2,13 @@
   <div>
     <h1>Commandes en cours de traitement</h1>
 
-    <no-ssr>
-      <div v-for="order in orders">
-        <div class="row">
-          <div class="col-sm">
-            {{order.title}}
-          </div>
+    <div v-for="order in orders">
+      <div class="row">
+        <div class="col-sm">
+          {{order.title}}
         </div>
       </div>
-    </no-ssr>
+    </div>
 
   </div>
 </template>
@@ -24,11 +22,16 @@
             }
         },
 
-        async asyncData({params}) {
-            // todo would be nice to have the domain in a constants
-            const response = await fetch('https://creation-edouard.netlify.com/.netlify/functions/todos');
-            const {data} = await response.json();
-            return {orders: data}
+        methods: {
+            async fetchOrders() {
+                const response = await fetch('/.netlify/functions/todo-all');
+                this.orders = await response.json();
+            }
+        },
+
+        // First attempt was to use `asyncData` which is particular to Nuxt lifecycle
+        mounted() {
+            this.fetchOrders()
         }
     }
 </script>
