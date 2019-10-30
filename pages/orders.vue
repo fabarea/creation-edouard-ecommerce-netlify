@@ -25,7 +25,8 @@
         methods: {
             async fetchOrders() {
                 const response = await fetch('/.netlify/functions/todo-all');
-                this.orders = await response.json();
+                const {data} = await response.json();
+                this.orders = data;
             }
         },
 
