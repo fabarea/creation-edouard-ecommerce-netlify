@@ -47,15 +47,8 @@ Based on the work of Sarah Drasner
 TODO
 ----
 
+* https://creation-edouard.netlify.com/orders/ should be fetched by ajax
 * Send email of the basket
-* Write the order into a database? Where? Mangodb? Firebase? Google Stylesheets?
-    how can it be secure??
 * Feature: add size of the product (M, S, ...)
 * Content: improve Edouard images
 * Content: add more text about how the shop works.
-* Layout: Remove square button 
-
-Nice to have
-------------
-
-Make the data comes from a third-party database ? Google Stylesheets
