@@ -48,19 +48,15 @@ export default {
       id: this.$route.params.id,
       quantity: 1,
       tempcart: [] ,// this object should be the same as the json store object, with an additional param, quantity
-      selected:null,
-      options:[
-        {value:null, text:'Choisissez votre taille'},
-        {value:'smf',text:'SM-Femme'},
-        {value:'mdf',text:'MD-Femme'},
-        {value:'lgf',text:'LG-Femme'},
-        {value:'xlf',text:'XL-Femme'},
-        {value:'smh',text:'SM-Homme'},
-        {value:'mdh',text:'MD-Homme'},
-        {value:'lgh',text:'LG-Homme'},
-        {value:'xlh',text:'XL-Homme'}
+      selected: 'size-m',
+      options:
+      [
+        {value:'size-s',text:'Taille S'},
+        {value:'size-m',text:'Taille M'},
+        {value:'size-L',text:'Taille L'},
+        {value:'size-XL',text:'Taille XL'},
+        {value:'size-XL',text:'Taille XXL'}
       ]
-
     };
   },
   computed: {
