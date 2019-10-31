@@ -1,4 +1,4 @@
-# 🛍 Ecommerce Store with Netlify Functions and Stripe
+# 🛍 Ecommerce Store with Netlify Functions
 
 > Boutique en ligne de vêtements africains, Burkina Faso Ouagadougou - Création Edouard
 
@@ -19,6 +19,15 @@ $ npm start
 
 # generate static project
 $ npm generate
+```
+
+## Configure the Backend and 
+
+Create a FaunaDB database and adjust the .env file following  
+
+```bash
+cp .env.example .env.development
+ln -s .env.development .env
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
@@ -47,15 +56,8 @@ Based on the work of Sarah Drasner
 TODO
 ----
 
+* https://creation-edouard.netlify.com/orders/ should be fetched by ajax
 * Send email of the basket
-* Write the order into a database? Where? Mangodb? Firebase? Google Stylesheets?
-    how can it be secure??
 * Feature: add size of the product (M, S, ...)
 * Content: improve Edouard images
 * Content: add more text about how the shop works.
-* Layout: Remove square button 
-
-Nice to have
-------------
-
-Make the data comes from a third-party database ? Google Stylesheets
