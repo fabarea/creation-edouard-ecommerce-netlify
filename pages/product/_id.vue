@@ -12,8 +12,16 @@
           <p class="quantity">
             <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
             <input type="number" v-model="quantity" />
-            <button class="update-num" @click="quantity++">+</button>
+            <button class="update-num" @click="quantity++">+</button> <b-form-select class="size ml-3 w-25 h-auto" v-model="selected" :options="options"></b-form-select>
+
           </p>
+          <p>
+            Available in additional colors:
+            <strong>
+              <span :style="`color: ${product.color}`">{{ product.color }}</span>
+            </strong>
+          </p>
+
           <p>
             <button class="btn btn-primary" @click="cartAdd">Ajouter au panier</button>
           </p>
@@ -39,7 +47,17 @@ export default {
     return {
       id: this.$route.params.id,
       quantity: 1,
-      tempcart: [] // this object should be the same as the json store object, with an additional param, quantity
+      tempcart: [] ,// this object should be the same as the json store object, with an additional param, quantity
+      selected: 'size-m',
+      options:
+              [
+                {value:'size-s',text:'Taille S'},
+                {value:'size-m',text:'Taille M'},
+                {value:'size-L',text:'Taille L'},
+                {value:'size-XL',text:'Taille XL'},
+                {value:'size-XL',text:'Taille XXL'}
+              ]
+
     };
   },
   computed: {
