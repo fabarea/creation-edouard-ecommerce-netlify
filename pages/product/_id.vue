@@ -14,7 +14,6 @@
             <input type="number" v-model="quantity"/>
             <button class="update-num" @click="quantity++">+</button>
             <b-form-select class="size ml-3 w-25 h-auto" v-model="selected" :options="options"></b-form-select>
-
           </p>
           <p>
             Available in additional colors:
